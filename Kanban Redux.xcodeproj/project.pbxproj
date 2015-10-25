@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEA11EBF1BDC91F60093533B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11EBE1BDC91F60093533B /* AppDelegate.swift */; };
+		EEA11EC11BDC91F60093533B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11EC01BDC91F60093533B /* ViewController.swift */; };
+		EEA11EC31BDC91F60093533B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA11EC21BDC91F60093533B /* Assets.xcassets */; };
+		EEA11EC61BDC91F60093533B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEA11EC41BDC91F60093533B /* Main.storyboard */; };
+		EEA11ED11BDC91F60093533B /* Kanban_ReduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11ED01BDC91F60093533B /* Kanban_ReduxTests.swift */; };
+		EEA11EDC1BDC91F60093533B /* Kanban_ReduxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11EDB1BDC91F60093533B /* Kanban_ReduxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEA11ECD1BDC91F60093533B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA11EB31BDC91F60093533B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEA11EBA1BDC91F60093533B;
+			remoteInfo = "Kanban Redux";
+		};
+		EEA11ED81BDC91F60093533B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEA11EB31BDC91F60093533B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEA11EBA1BDC91F60093533B;
+			remoteInfo = "Kanban Redux";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEA11EBB1BDC91F60093533B /* Kanban Redux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanban Redux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA11EBE1BDC91F60093533B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EEA11EC01BDC91F60093533B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EEA11EC21BDC91F60093533B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEA11EC51BDC91F60093533B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEA11EC71BDC91F60093533B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA11ECC1BDC91F60093533B /* Kanban ReduxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanban ReduxTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA11ED01BDC91F60093533B /* Kanban_ReduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanban_ReduxTests.swift; sourceTree = "<group>"; };
+		EEA11ED21BDC91F60093533B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEA11ED71BDC91F60093533B /* Kanban ReduxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kanban ReduxUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA11EDB1BDC91F60093533B /* Kanban_ReduxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kanban_ReduxUITests.swift; sourceTree = "<group>"; };
+		EEA11EDD1BDC91F60093533B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEA11EB81BDC91F60093533B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11EC91BDC91F60093533B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11ED41BDC91F60093533B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEA11EB21BDC91F60093533B = {
+			isa = PBXGroup;
+			children = (
+				EEA11EBD1BDC91F60093533B /* Kanban Redux */,
+				EEA11ECF1BDC91F60093533B /* Kanban ReduxTests */,
+				EEA11EDA1BDC91F60093533B /* Kanban ReduxUITests */,
+				EEA11EBC1BDC91F60093533B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEA11EBC1BDC91F60093533B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEA11EBB1BDC91F60093533B /* Kanban Redux.app */,
+				EEA11ECC1BDC91F60093533B /* Kanban ReduxTests.xctest */,
+				EEA11ED71BDC91F60093533B /* Kanban ReduxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEA11EBD1BDC91F60093533B /* Kanban Redux */ = {
+			isa = PBXGroup;
+			children = (
+				EEA11EBE1BDC91F60093533B /* AppDelegate.swift */,
+				EEA11EC01BDC91F60093533B /* ViewController.swift */,
+				EEA11EC21BDC91F60093533B /* Assets.xcassets */,
+				EEA11EC41BDC91F60093533B /* Main.storyboard */,
+				EEA11EC71BDC91F60093533B /* Info.plist */,
+			);
+			path = "Kanban Redux";
+			sourceTree = "<group>";
+		};
+		EEA11ECF1BDC91F60093533B /* Kanban ReduxTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEA11ED01BDC91F60093533B /* Kanban_ReduxTests.swift */,
+				EEA11ED21BDC91F60093533B /* Info.plist */,
+			);
+			path = "Kanban ReduxTests";
+			sourceTree = "<group>";
+		};
+		EEA11EDA1BDC91F60093533B /* Kanban ReduxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EEA11EDB1BDC91F60093533B /* Kanban_ReduxUITests.swift */,
+				EEA11EDD1BDC91F60093533B /* Info.plist */,
+			);
+			path = "Kanban ReduxUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEA11EBA1BDC91F60093533B /* Kanban Redux */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA11EE01BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban Redux" */;
+			buildPhases = (
+				EEA11EB71BDC91F60093533B /* Sources */,
+				EEA11EB81BDC91F60093533B /* Frameworks */,
+				EEA11EB91BDC91F60093533B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kanban Redux";
+			productName = "Kanban Redux";
+			productReference = EEA11EBB1BDC91F60093533B /* Kanban Redux.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEA11ECB1BDC91F60093533B /* Kanban ReduxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA11EE31BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxTests" */;
+			buildPhases = (
+				EEA11EC81BDC91F60093533B /* Sources */,
+				EEA11EC91BDC91F60093533B /* Frameworks */,
+				EEA11ECA1BDC91F60093533B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEA11ECE1BDC91F60093533B /* PBXTargetDependency */,
+			);
+			name = "Kanban ReduxTests";
+			productName = "Kanban ReduxTests";
+			productReference = EEA11ECC1BDC91F60093533B /* Kanban ReduxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EEA11ED61BDC91F60093533B /* Kanban ReduxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEA11EE61BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxUITests" */;
+			buildPhases = (
+				EEA11ED31BDC91F60093533B /* Sources */,
+				EEA11ED41BDC91F60093533B /* Frameworks */,
+				EEA11ED51BDC91F60093533B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEA11ED91BDC91F60093533B /* PBXTargetDependency */,
+			);
+			name = "Kanban ReduxUITests";
+			productName = "Kanban ReduxUITests";
+			productReference = EEA11ED71BDC91F60093533B /* Kanban ReduxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEA11EB31BDC91F60093533B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Aaron Stockdill";
+				TargetAttributes = {
+					EEA11EBA1BDC91F60093533B = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					EEA11ECB1BDC91F60093533B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EEA11EBA1BDC91F60093533B;
+					};
+					EEA11ED61BDC91F60093533B = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = EEA11EBA1BDC91F60093533B;
+					};
+				};
+			};
+			buildConfigurationList = EEA11EB61BDC91F60093533B /* Build configuration list for PBXProject "Kanban Redux" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEA11EB21BDC91F60093533B;
+			productRefGroup = EEA11EBC1BDC91F60093533B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEA11EBA1BDC91F60093533B /* Kanban Redux */,
+				EEA11ECB1BDC91F60093533B /* Kanban ReduxTests */,
+				EEA11ED61BDC91F60093533B /* Kanban ReduxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEA11EB91BDC91F60093533B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA11EC31BDC91F60093533B /* Assets.xcassets in Resources */,
+				EEA11EC61BDC91F60093533B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11ECA1BDC91F60093533B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11ED51BDC91F60093533B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEA11EB71BDC91F60093533B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA11EC11BDC91F60093533B /* ViewController.swift in Sources */,
+				EEA11EBF1BDC91F60093533B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11EC81BDC91F60093533B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA11ED11BDC91F60093533B /* Kanban_ReduxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEA11ED31BDC91F60093533B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEA11EDC1BDC91F60093533B /* Kanban_ReduxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEA11ECE1BDC91F60093533B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEA11EBA1BDC91F60093533B /* Kanban Redux */;
+			targetProxy = EEA11ECD1BDC91F60093533B /* PBXContainerItemProxy */;
+		};
+		EEA11ED91BDC91F60093533B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEA11EBA1BDC91F60093533B /* Kanban Redux */;
+			targetProxy = EEA11ED81BDC91F60093533B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEA11EC41BDC91F60093533B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEA11EC51BDC91F60093533B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEA11EDE1BDC91F60093533B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EEA11EDF1BDC91F60093533B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EEA11EE11BDC91F60093533B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban Redux/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-Redux";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEA11EE21BDC91F60093533B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban Redux/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-Redux";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEA11EE41BDC91F60093533B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban ReduxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-ReduxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanban Redux.app/Contents/MacOS/Kanban Redux";
+			};
+			name = Debug;
+		};
+		EEA11EE51BDC91F60093533B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban ReduxTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-ReduxTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanban Redux.app/Contents/MacOS/Kanban Redux";
+			};
+			name = Release;
+		};
+		EEA11EE71BDC91F60093533B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban ReduxUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-ReduxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kanban Redux";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		EEA11EE81BDC91F60093533B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Kanban ReduxUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aaronstockdill.Kanban-ReduxUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kanban Redux";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEA11EB61BDC91F60093533B /* Build configuration list for PBXProject "Kanban Redux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA11EDE1BDC91F60093533B /* Debug */,
+				EEA11EDF1BDC91F60093533B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEA11EE01BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban Redux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA11EE11BDC91F60093533B /* Debug */,
+				EEA11EE21BDC91F60093533B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EEA11EE31BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA11EE41BDC91F60093533B /* Debug */,
+				EEA11EE51BDC91F60093533B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EEA11EE61BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEA11EE71BDC91F60093533B /* Debug */,
+				EEA11EE81BDC91F60093533B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEA11EB31BDC91F60093533B /* Project object */;
+}
