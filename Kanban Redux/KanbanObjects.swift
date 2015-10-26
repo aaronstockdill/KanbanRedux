@@ -8,6 +8,9 @@
 
 import Foundation
 
+/*
+ * Task is the model of what a task is, inside a given collection.
+ */
 class Task {
     let id: Int
     var title: String
@@ -15,16 +18,16 @@ class Task {
     var tags: [String]
     var collection: Collection
     
-    init(withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
+    init(withId id: Int, withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
         self.title = title
         self.description = description
         self.collection = collection
-        self.id = collection.new_id()
+        self.id = id
         self.tags = tags
     }
     
-    convenience init(withTitle title: String, withDescription description: String, inCollection collection: Collection) {
-        self.init(withTitle: title, withDescription: description, inCollection: collection, withTags: [])
+    convenience init(withId id: Int, withTitle title: String, withDescription description: String, inCollection collection: Collection) {
+        self.init(withId: id, withTitle: title, withDescription: description, inCollection: collection, withTags: [])
     }
     
     func xml() -> String {
@@ -41,26 +44,24 @@ class Task {
     }
 }
 
-
+/*
+ * Collection holds some tasks on a certain board.
+ */
 class Collection {
     let id: Int
     var title: String
     var tasks: [Task]
     var board: Board
     
-    init(withTitle title: String, inBoard board: Board, withTasks tasks: [Task]) {
+    init(withId id: Int, withTitle title: String, inBoard board: Board, withTasks tasks: [Task]) {
         self.board = board
         self.title = title
-        self.id = board.new_id()
+        self.id = id
         self.tasks = tasks
     }
     
-    convenience init(withTitle title: String, inBoard board: Board) {
-        self.init(withTitle: title, inBoard: board, withTasks: [])
-    }
-    
-    func new_id() -> Int {
-        return self.board.new_id()
+    convenience init(withId id: Int, withTitle title: String, inBoard board: Board) {
+        self.init(withId: id, withTitle: title, inBoard: board, withTasks: [])
     }
     
     func xml() -> String {
@@ -76,14 +77,16 @@ class Collection {
     }
 }
 
-
+/*
+ * A board contains some collections which have some tasks.
+ */
 class Board {
     let id: Int
     var title: String
     var collections: [Collection]
     var next_id: Int = 0
     
-    init(withTitle title: String, withId id: Int, withCollections collections: [Collection]) {
+    init(withId id: Int, withTitle title: String, withCollections collections: [Collection]) {
         self.title = title
         self.collections = []
         self.collections = collections
@@ -96,13 +99,8 @@ class Board {
         self.id = id
     }
     
-    convenience init(withTitle title: String, withId id: Int) {
-        self.init(withTitle: title, withId: id, withCollections: [])
-    }
-    
-    func new_id() -> Int {
-        self.next_id += 1
-        return self.next_id - 1
+    convenience init(withId id: Int, withTitle title: String) {
+        self.init(withId: id, withTitle: title, withCollections: [])
     }
     
     func xml() -> String {
@@ -118,15 +116,32 @@ class Board {
     }
 }
 
-
+/*
+ * Manage all the state of the Application's Kanban Boards
+ */
 class KanbanStateController {
     var boards: [Board] = []
     var next_id: Int = 0;
     
+    func new_id() -> Int {
+        let id = next_id
+        next_id++
+        return id
+    }
+    
     func new_board(withTitle title: String) {
-        let the_board = Board(withTitle: title, withId: self.next_id)
+        let the_board = Board(withId: self.new_id(), withTitle: title)
         self.boards.append(the_board)
-        self.next_id++
+    }
+    
+    func new_collection(withTitle title: String, onBoard board: Board) {
+        let new_collection = Collection(withId: self.new_id(), withTitle: title, inBoard: board)
+        board.collections.append(new_collection)
+    }
+    
+    func new_task(withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
+        let new_task = Task(withId: self.new_id(), withTitle: title, withDescription: description, inCollection: collection, withTags: tags)
+        collection.tasks.append(new_task)
     }
     
     func xml() -> String {
@@ -138,14 +153,24 @@ class KanbanStateController {
         return xml
     }
     
-    func new_collection(withTitle title: String, onBoard board: Board) {
-        let new_collection = Collection(withTitle: title, inBoard: board)
-        board.collections.append(new_collection)
+    func create_from_xml(xml: String) {
+        
     }
     
-    func new_task(withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
-        let new_task = Task(withTitle: title, withDescription: description, inCollection: collection, withTags: tags)
-        collection.tasks.append(new_task)
+    func _parse_board(xml: String) {
+        
+    }
+    
+    func _parse_collection(xml: String, board: Board) {
+        
+    }
+    
+    func _parse_task(xml: String, collection: Collection) {
+        
+    }
+    
+    func _parse_tags(xml: String, task: Task) {
+        
     }
     
 }

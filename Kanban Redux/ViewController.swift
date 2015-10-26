@@ -8,16 +8,23 @@
 
 import Cocoa
 
+/*
+ * KanbanViewController sets up a common element called 'app' which contains
+ * the reference to kb_controllr holding the program state.
+ */
 class KanbanViewController: NSViewController {
-    var ad =  NSApplication.sharedApplication().delegate as! AppDelegate
+    var app =  NSApplication.sharedApplication().delegate as! AppDelegate
 }
 
+/*
+ * ViewController is the main controlling point for the program.
+ */
 class ViewController: KanbanViewController {
     
     @IBOutlet var textbox: NSTextFieldCell!
     
     @IBAction func showXML(sender: AnyObject) {
-        let xml_output = ad.kb_controller.xml()
+        let xml_output = app.kb_controller.xml()
         textbox.title = xml_output
     }
     
@@ -56,19 +63,23 @@ class ViewController: KanbanViewController {
     
 }
 
-
+/*
+ * BoardSheetViewController manages the 'New Board' sheet.
+ */
 class BoardSheetViewController: KanbanViewController {
     
     @IBOutlet weak var board_name_box: NSTextFieldCell!
     
     @IBAction func get_new_board_details(sender: AnyObject) {
         let board_name = board_name_box.title
-        ad.kb_controller.new_board(withTitle: board_name)
+        app.kb_controller.new_board(withTitle: board_name)
         self.dismissController(self)
     }
 }
 
-
+/*
+ * CollectionSheetViewController manages the 'New Collection' sheet.
+ */
 class CollectionSheetViewController: KanbanViewController {
     
     @IBOutlet weak var collection_name_box: NSTextFieldCell!
@@ -77,7 +88,7 @@ class CollectionSheetViewController: KanbanViewController {
     override func viewDidLoad() {
         var i: Int = 0
         var items: [String] = []
-        for board in ad.kb_controller.boards {
+        for board in app.kb_controller.boards {
             items.append(board.title)
             i++
         }
@@ -93,14 +104,16 @@ class CollectionSheetViewController: KanbanViewController {
     @IBAction func get_new_collection_details(sender: AnyObject) {
         let collection_name = collection_name_box.title
         let board_number = collection_board_selector.indexOfSelectedItem
-        let board = ad.kb_controller.boards[board_number]
-        ad.kb_controller.new_collection(withTitle: collection_name, onBoard: board)
+        let board = app.kb_controller.boards[board_number]
+        app.kb_controller.new_collection(withTitle: collection_name, onBoard: board)
         self.dismissController(self)
     }
 
 }
 
-
+/*
+ * TaskSheetViewController manages the 'New Task' sheet.
+ */
 class TaskSheetViewController: KanbanViewController {
     
     @IBOutlet weak var task_name_box: NSTextFieldCell!
@@ -112,7 +125,7 @@ class TaskSheetViewController: KanbanViewController {
     override func viewDidLoad() {
         var i: Int = 0
         var board_names: [String] = []
-        for board in ad.kb_controller.boards {
+        for board in app.kb_controller.boards {
             board_names.append(board.title)
             i++
         }
@@ -131,7 +144,7 @@ class TaskSheetViewController: KanbanViewController {
         let board_number = task_board_selector.indexOfSelectedItem
         var collection_names: [String] = []
         var i: Int = 0
-        for collection in ad.kb_controller.boards[board_number].collections {
+        for collection in app.kb_controller.boards[board_number].collections {
             collection_names.append(collection.title)
             i++
         }
@@ -150,11 +163,11 @@ class TaskSheetViewController: KanbanViewController {
         }
         
         let board_number = task_board_selector.indexOfSelectedItem
-        let board = ad.kb_controller.boards[board_number]
+        let board = app.kb_controller.boards[board_number]
         let collection_number = task_collection_selector.indexOfSelectedItem
         let collection = board.collections[collection_number]
         
-        ad.kb_controller.new_task(withTitle: task_name, withDescription: task_description, inCollection: collection, withTags: task_tags)
+        app.kb_controller.new_task(withTitle: task_name, withDescription: task_description, inCollection: collection, withTags: task_tags)
         self.dismissController(self)
     }
     

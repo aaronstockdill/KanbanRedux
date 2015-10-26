@@ -645,7 +645,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Kanban_Redux" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="68.5" y="-4"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -718,7 +718,7 @@
                                     <action selector="new_board:" target="XfG-lQ-9wD" id="lqR-nh-qIp"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-xh-8bV">
+                            <textField verticalHuggingPriority="1" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-xh-8bV">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="233"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="233" id="Uee-4e-KGx"/>
@@ -732,7 +732,7 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="qkp-6h-ZZr" firstAttribute="leading" secondItem="C1f-SA-fDa" secondAttribute="trailing" constant="58" id="0u7-uf-yLp"/>
+                            <constraint firstAttribute="trailing" secondItem="qkp-6h-ZZr" secondAttribute="trailing" constant="9" id="2E9-Zz-s5Q"/>
                             <constraint firstItem="Sb3-ZE-BYi" firstAttribute="baseline" secondItem="40D-Xm-a54" secondAttribute="baseline" id="4z2-pu-V87"/>
                             <constraint firstItem="C1f-SA-fDa" firstAttribute="baseline" secondItem="40D-Xm-a54" secondAttribute="baseline" id="8Y1-TA-s25"/>
                             <constraint firstItem="C1f-SA-fDa" firstAttribute="baseline" secondItem="qkp-6h-ZZr" secondAttribute="baseline" id="8wk-2b-mGB"/>
