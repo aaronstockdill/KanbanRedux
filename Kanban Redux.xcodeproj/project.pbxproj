@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE0501C81BE897D0007A5BE9 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = EE0501C71BE897D0007A5BE9 /* Icons */; };
 		EEA11EBF1BDC91F60093533B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11EBE1BDC91F60093533B /* AppDelegate.swift */; };
 		EEA11EC11BDC91F60093533B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA11EC01BDC91F60093533B /* ViewController.swift */; };
 		EEA11EC31BDC91F60093533B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEA11EC21BDC91F60093533B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE0501C71BE897D0007A5BE9 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		EEA11EBB1BDC91F60093533B /* Kanban Redux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kanban Redux.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA11EBE1BDC91F60093533B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEA11EC01BDC91F60093533B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				EEA11EC21BDC91F60093533B /* Assets.xcassets */,
 				EEA11EC41BDC91F60093533B /* Main.storyboard */,
 				EEA11EC71BDC91F60093533B /* Info.plist */,
+				EE0501C71BE897D0007A5BE9 /* Icons */,
 			);
 			path = "Kanban Redux";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE0501C81BE897D0007A5BE9 /* Icons in Resources */,
 				EEA11EC31BDC91F60093533B /* Assets.xcassets in Resources */,
 				EEA11EC61BDC91F60093533B /* Main.storyboard in Resources */,
 			);
@@ -480,6 +484,7 @@
 				EEA11EE21BDC91F60093533B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEA11EE31BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +493,7 @@
 				EEA11EE51BDC91F60093533B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEA11EE61BDC91F60093533B /* Build configuration list for PBXNativeTarget "Kanban ReduxUITests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +502,7 @@
 				EEA11EE81BDC91F60093533B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
