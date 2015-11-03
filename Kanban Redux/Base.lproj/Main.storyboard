@@ -671,22 +671,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Kanban_Redux" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="268"/>
+                        <rect key="frame" x="0.0" y="0.0" width="622" height="268"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-6h-ZZr">
-                                <rect key="frame" x="383" y="234" width="94" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Log XML" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pke-3A-Upj">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="showXML:" target="XfG-lQ-9wD" id="mf6-EL-wU8"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="40D-Xm-a54">
                                 <rect key="frame" x="109" y="234" width="132" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="dRS-rz-grh"/>
+                                </constraints>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="New Collection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jvd-bj-U3K">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -698,6 +690,9 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C1f-SA-fDa">
                                 <rect key="frame" x="238" y="234" width="99" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="87" id="esi-1c-1kW"/>
+                                </constraints>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="New Task" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mQg-II-eDK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -709,6 +704,9 @@
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Sb3-ZE-BYi">
                                 <rect key="frame" x="5" y="234" width="107" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Ayb-I5-dgU"/>
+                                </constraints>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="New Board" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qFU-cj-Zgi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -718,18 +716,46 @@
                                     <action selector="new_board:" target="XfG-lQ-9wD" id="lqR-nh-qIp"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="1" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-xh-8bV">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="233"/>
+                            <textField verticalHuggingPriority="1" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTW-xh-8bV">
+                                <rect key="frame" x="6" y="5" width="611" height="228"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="233" id="Uee-4e-KGx"/>
                                 </constraints>
                                 <animations/>
-                                <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="VIQ-Hn-zmn">
+                                <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="VIQ-Hn-zmn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qkp-6h-ZZr">
+                                <rect key="frame" x="524" y="234" width="94" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="c98-BA-uww"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Log XML" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pke-3A-Upj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showXML:" target="XfG-lQ-9wD" id="mf6-EL-wU8"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dbn-jc-2Oq">
+                                <rect key="frame" x="423" y="234" width="101" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="pOP-41-trT"/>
+                                </constraints>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Load XML" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gec-sM-EpJ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="parseXML:" target="XfG-lQ-9wD" id="MnQ-Zf-8qY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qkp-6h-ZZr" secondAttribute="trailing" constant="9" id="2E9-Zz-s5Q"/>
@@ -741,8 +767,11 @@
                             <constraint firstItem="kTW-xh-8bV" firstAttribute="top" secondItem="Sb3-ZE-BYi" secondAttribute="bottom" constant="8" id="Hny-1Y-t4F"/>
                             <constraint firstItem="Sb3-ZE-BYi" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="IKm-x6-agh"/>
                             <constraint firstItem="Sb3-ZE-BYi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="11" id="Lj8-xQ-42M"/>
+                            <constraint firstItem="dbn-jc-2Oq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="C1f-SA-fDa" secondAttribute="trailing" constant="12" id="MP4-Eo-OnF"/>
+                            <constraint firstItem="dbn-jc-2Oq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="6" id="lfO-tu-Abe"/>
                             <constraint firstItem="40D-Xm-a54" firstAttribute="leading" secondItem="Sb3-ZE-BYi" secondAttribute="trailing" constant="9" id="pyU-Pb-PGi"/>
                             <constraint firstAttribute="bottom" secondItem="kTW-xh-8bV" secondAttribute="bottom" id="tRq-W1-Csj"/>
+                            <constraint firstItem="qkp-6h-ZZr" firstAttribute="leading" secondItem="dbn-jc-2Oq" secondAttribute="trailing" constant="12" id="tcq-eD-onh"/>
                             <constraint firstAttribute="trailing" secondItem="kTW-xh-8bV" secondAttribute="trailing" id="wp1-AK-yup"/>
                         </constraints>
                         <animations/>
@@ -753,7 +782,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="68" y="764"/>
+            <point key="canvasLocation" x="48" y="751"/>
         </scene>
         <!--Board Sheet View Controller-->
         <scene sceneID="WJj-u9-oeI">
@@ -784,8 +813,22 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ka7-HI-fO0">
+                                <rect key="frame" x="14" y="7" width="82" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pJT-Rc-PNC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="nLk-5t-bSp" id="rFc-tA-m3E"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijF-te-BdY">
-                                <rect key="frame" x="220" y="7" width="81" height="32"/>
+                                <rect key="frame" x="217" y="7" width="81" height="32"/>
                                 <animations/>
                                 <buttonCell key="cell" type="push" title="Create" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KgP-KA-gdj">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -793,17 +836,6 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="get_new_board_details:" target="nLk-5t-bSp" id="2vc-kW-Jbf"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ka7-HI-fO0">
-                                <rect key="frame" x="14" y="7" width="75" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pJT-Rc-PNC">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="dismissController:" target="nLk-5t-bSp" id="rFc-tA-m3E"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -846,17 +878,6 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2a7-XT-3Ed">
-                                <rect key="frame" x="14" y="1" width="75" height="32"/>
-                                <animations/>
-                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oaS-rY-Pdp">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="dismissController:" target="Lgn-GK-aRL" id="uf2-OE-eVF"/>
-                                </connections>
-                            </button>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Agk-74-TN0">
                                 <rect key="frame" x="18" y="41" width="277" height="26"/>
                                 <animations/>
@@ -865,6 +886,9 @@
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="HB8-ww-7GY"/>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="performClick:" target="qqY-TW-uSd" id="YjB-ee-b2d"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ixa-lx-m71">
                                 <rect key="frame" x="18" y="66" width="61" height="17"/>
@@ -884,6 +908,20 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="get_new_collection_details:" target="Lgn-GK-aRL" id="MzX-wz-Xt2"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2a7-XT-3Ed">
+                                <rect key="frame" x="14" y="1" width="82" height="32"/>
+                                <animations/>
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="oaS-rY-Pdp">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="Lgn-GK-aRL" id="uf2-OE-eVF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -937,11 +975,14 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mb5-uq-C94">
-                                <rect key="frame" x="14" y="13" width="75" height="32"/>
+                                <rect key="frame" x="14" y="13" width="82" height="32"/>
                                 <animations/>
-                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5cM-dG-DSc">
+                                <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5cM-dG-DSc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="dismissController:" target="WFF-5b-26I" id="gWS-a8-2lM"/>
@@ -958,18 +999,6 @@
                                     <action selector="get_new_task_details:" target="WFF-5b-26I" id="Cnd-dt-v6A"/>
                                 </connections>
                             </button>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5L-az-j40">
-                                <rect key="frame" x="18" y="101" width="277" height="26"/>
-                                <animations/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="RWj-nH-aEm">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="rYL-Zg-cN2"/>
-                                </popUpButtonCell>
-                                <connections>
-                                    <action selector="set_available_collections:" target="WFF-5b-26I" id="hut-vi-Tp9"/>
-                                </connections>
-                            </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIM-xR-JRr">
                                 <rect key="frame" x="18" y="126" width="61" height="17"/>
                                 <animations/>
@@ -987,6 +1016,9 @@
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="pCF-N0-dPF"/>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="performClick:" target="wrG-C0-nRM" id="isc-v9-YHz"/>
+                                </connections>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kEs-vj-FDD">
                                 <rect key="frame" x="18" y="77" width="80" height="17"/>
@@ -1017,6 +1049,9 @@
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="performClick:" target="i5L-az-j40" id="9do-Ma-Ghv"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ke-sf-YOW">
                                 <rect key="frame" x="18" y="278" width="106" height="17"/>
@@ -1027,6 +1062,18 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i5L-az-j40">
+                                <rect key="frame" x="18" y="99" width="277" height="26"/>
+                                <animations/>
+                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="RWj-nH-aEm">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="rYL-Zg-cN2"/>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="set_available_collections:" target="WFF-5b-26I" id="hut-vi-Tp9"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                         <animations/>
                     </view>

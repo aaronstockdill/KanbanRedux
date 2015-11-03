@@ -28,6 +28,10 @@ class ViewController: KanbanViewController {
         textbox.title = xml_output
     }
     
+    @IBAction func parseXML(sender: AnyObject) {
+        app.kb_controller.create_from_xml(textbox.title)
+    }
+    
     // ------- Board Creation ----------
 
     lazy var boardNameController: NSViewController = {
