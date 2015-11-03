@@ -782,7 +782,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="751"/>
+            <point key="canvasLocation" x="812" y="285"/>
         </scene>
         <!--Board Sheet View Controller-->
         <scene sceneID="WJj-u9-oeI">
@@ -847,7 +847,7 @@ Gw
                 </viewController>
                 <customObject id="4L4-ak-M7o" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="987.5"/>
+            <point key="canvasLocation" x="-16" y="608.5"/>
         </scene>
         <!--Collection Sheet View Controller-->
         <scene sceneID="YHM-10-ufH">
@@ -934,7 +934,7 @@ Gw
                 </viewController>
                 <customObject id="ugW-N0-hWc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="1165.5"/>
+            <point key="canvasLocation" x="324" y="637.5"/>
         </scene>
         <!--Task Sheet View Controller-->
         <scene sceneID="CM5-Gw-uYA">
@@ -1087,7 +1087,7 @@ Gw
                 </viewController>
                 <customObject id="846-0c-TLD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16" y="1502.5"/>
+            <point key="canvasLocation" x="669" y="768.5"/>
         </scene>
     </scenes>
 </document>

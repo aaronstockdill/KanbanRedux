@@ -39,6 +39,10 @@ class Task {
         self.init(withId: id, withTitle: title, withDescription: description, inCollection: collection, withTags: [])
     }
     
+    func add_tag(tag: String) {
+        self.tags.append(tag)
+    }
+    
     func xml() -> String {
         var xml: String = "<task id='\(self.id)'>"
         xml += "<tasktitle>\(self.title)</tasktitle>"
@@ -71,6 +75,20 @@ class Collection {
     
     convenience init(withId id: Int, withTitle title: String, inBoard board: Board) {
         self.init(withId: id, withTitle: title, inBoard: board, withTasks: [])
+    }
+    
+    func remove_task(task: Task) {
+        for (i, each_task) in self.tasks.enumerate() {
+            if task.id == each_task.id {
+                self.tasks.removeAtIndex(i)
+                break
+            }
+        }
+    }
+    
+    func insert_task(task: Task, atIndex index: Int) {
+        self.tasks.insert(task, atIndex: index)
+        task.collection = self
     }
     
     func xml() -> String {
@@ -112,6 +130,15 @@ class Board {
         self.init(withId: id, withTitle: title, withCollections: [])
     }
     
+    func move_task(task task: Task, fromCollection coll1: Collection, toCollection coll2: Collection, atIndex index: Int) {
+        coll1.remove_task(task)
+        coll2.insert_task(task, atIndex: index)
+    }
+    
+    func move_task(task task: Task, fromCollection coll1: Collection, toCollection coll2: Collection) {
+        self.move_task(task: task, fromCollection: coll1, toCollection: coll2, atIndex: coll2.tasks.count + 1)
+    }
+
     func xml() -> String {
         var xml: String = "<board id='\(self.id)'>"
         xml += "<boardtitle>\(self.title)</boardtitle>"
@@ -123,6 +150,54 @@ class Board {
         xml += "</board>"
         return xml
     }
+}
+
+/*
+ * Manage all the state of the Application's Kanban Boards
+ */
+class KanbanStateController: NSObject {
+    var boards: [Board] = []
+    var next_id: Int = 0;
+    
+    func new_id() -> Int {
+        let id = next_id
+        next_id++
+        return id
+    }
+    
+    func new_board(withTitle title: String) {
+        let the_board = Board(withId: self.new_id(), withTitle: title)
+        self.boards.append(the_board)
+    }
+    
+    func new_collection(withTitle title: String, onBoard board: Board) {
+        let new_collection = Collection(withId: self.new_id(), withTitle: title, inBoard: board)
+        board.collections.append(new_collection)
+    }
+    
+    func new_task(withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
+        let new_task = Task(withId: self.new_id(), withTitle: title, withDescription: description, inCollection: collection, withTags: tags)
+        collection.tasks.append(new_task)
+    }
+    
+    func xml() -> String {
+        var xml: String = "<?xml version='1.0'?><kanban>"
+        for board in self.boards {
+            xml += board.xml()
+        }
+        xml += "</kanban>"
+        return xml
+    }
+    
+    func create_from_xml(xml: String) {
+        let kb_parser = KanbanParser()
+        let parser = NSXMLParser(data: xml.dataUsingEncoding(NSUTF8StringEncoding)!)
+        parser.delegate = kb_parser
+        parser.parse()
+        self.boards = kb_parser.boards
+        print(self.xml())
+    }
+    
 }
 
 /*
@@ -176,52 +251,4 @@ class KanbanParser: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser, foundCharacters string: String) {
         lastString = string
     }
-}
-
-/*
- * Manage all the state of the Application's Kanban Boards
- */
-class KanbanStateController: NSObject {
-    var boards: [Board] = []
-    var next_id: Int = 0;
-    
-    func new_id() -> Int {
-        let id = next_id
-        next_id++
-        return id
-    }
-    
-    func new_board(withTitle title: String) {
-        let the_board = Board(withId: self.new_id(), withTitle: title)
-        self.boards.append(the_board)
-    }
-    
-    func new_collection(withTitle title: String, onBoard board: Board) {
-        let new_collection = Collection(withId: self.new_id(), withTitle: title, inBoard: board)
-        board.collections.append(new_collection)
-    }
-    
-    func new_task(withTitle title: String, withDescription description: String, inCollection collection: Collection, withTags tags: [String]) {
-        let new_task = Task(withId: self.new_id(), withTitle: title, withDescription: description, inCollection: collection, withTags: tags)
-        collection.tasks.append(new_task)
-    }
-    
-    func xml() -> String {
-        var xml: String = "<?xml version='1.0'?><kanban>"
-        for board in self.boards {
-            xml += board.xml()
-        }
-        xml += "</kanban>"
-        return xml
-    }
-    
-    func create_from_xml(xml: String) {
-        let kb_parser = KanbanParser()
-        let parser = NSXMLParser(data: xml.dataUsingEncoding(NSUTF8StringEncoding)!)
-        parser.delegate = kb_parser
-        parser.parse()
-        self.boards = kb_parser.boards
-        print(self.xml())
-    }
-    
 }
